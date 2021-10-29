@@ -8,13 +8,13 @@
     </head>
     <body>
        <div>
-           @include('name')
+           @include('partials.header')
        </div>
        <div>
-            @yield('name')
+            @yield('content')
        </div>
        <div>
-            @include('name')
+            @include('partials.footer')
        </div>
     </body>
 </html>
