@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-class Trip extends Migration
+class TripTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,16 +13,13 @@ class Trip extends Migration
      */
     public function up()
     {
-        Schema::create('flights', function(Blueprint $table){
-            $table->bigIncrements('id');
+        Schema::create('trips', function (Blueprint $table) {
+            $table->id();
             $table->string("name_destination");
             $table->date('departure');
             $table->date('return');
             $table->integer('price');
             $table->timestamps();
-            
-            
-
         });
     }
 
